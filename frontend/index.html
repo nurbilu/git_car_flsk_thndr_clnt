@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car CRUD Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Car CRUD Application</h1>
+
+        <!-- Create Form -->
+        <div>
+            <h2>Add a New Car</h2>
+            <form id="createForm">
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand" required>
+
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" required>
+
+                <button type="button" onclick="createCar()">Add Car</button>
+            </form>
+        </div>
+
+        <!-- Car List -->
+        <div>
+            <h2>Car List</h2>
+            <ul id="carList"></ul>
+        </div>
+
+        <!-- Update Form -->
+        <div id="updateFormContainer" style="display: none;">
+            <h2>Edit Car</h2>
+            <form id="updateForm">
+                <label for="updateBrand">Brand:</label>
+                <input type="text" id="updateBrand" name="updateBrand" required>
+
+                <label for="updateModel">Model:</label>
+                <input type="text" id="updateModel" name="updateModel" required>
+
+                <button type="button" onclick="updateCar()">Update Car</button>
+                <button type="button" onclick="cancelUpdate()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
